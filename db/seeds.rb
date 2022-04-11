@@ -1,6 +1,6 @@
 User.destroy_all
-u1 = User.create :email => 'kk@ga.co'
-u2 = User.create :email => 'll@ga.co'
+u1 = User.create :email => 'kk@ga.co', :password => 'chicken'
+u2 = User.create :email => 'll@ga.co', :password => 'chicken'
 puts "#{ User.count } users"
 
 Order.destroy_all
