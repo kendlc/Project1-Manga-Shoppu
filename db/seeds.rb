@@ -3,6 +3,9 @@ u1 = User.create :email => 'kk@ga.co'
 u2 = User.create :email => 'll@ga.co'
 puts "#{ User.count } users"
 
+Order.destroy_all
+o1 = Order.create
+
 Manga.destroy_all
 m1 = Manga.create :title => 'Naruto'
 m2 = Manga.create :title => 'Bleach'
@@ -32,3 +35,9 @@ m1.volumes << v1 << v2
 
 puts "Books and authors"
 a1.mangas << m1
+
+puts "volumes and orders"
+o1.volumes << v1
+
+puts "user and orders"
+u2.orders << o1
