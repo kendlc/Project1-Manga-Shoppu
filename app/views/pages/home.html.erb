@@ -3,3 +3,29 @@
 <% if @current_user.present? %>
     <h2>Welcome <%= @current_user.email %>!</h2>
 <% end %>
+
+
+<% @yurucamp.genre.each do |i|%>
+<p><%= i['name'] %></h3></p>
+<% end %>
+
+<% @final_data["data"].each do |i|%>
+<img src="<%= i["images"]["jpg"]["image_url"] %>">
+<% end %>
+<img src="<%= @final_data["data"][0]["images"]["jpg"]["image_url"] %>">
+
+
+<%= @final_data["data"][2]["authors"][0]["name"] %>
+
+
+<% @mangasearch.raw["results"].each do |i|%>
+<p><%= i['mal_id'] %></p>
+<% end %>
+
+<% @mangasearch.raw["results"].each do |i|%>
+<p><%= i['title'] %> <%= i['author']%></p>
+<% end %>
+
+<% @mangasearch.raw["results"].each do |i|%>
+<img src="<%= i['image_url'] %>" alt="<%= i['title']%>">
+<% end %>
