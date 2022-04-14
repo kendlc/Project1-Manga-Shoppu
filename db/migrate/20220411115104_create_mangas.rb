@@ -3,6 +3,7 @@ class CreateMangas < ActiveRecord::Migration[5.2]
     create_table :mangas do |t|
       t.text :title
       t.text :image
+      t.integer :vol
       t.integer :author_id
 
       t.timestamps

@@ -7,19 +7,17 @@ Order.destroy_all
 o1 = Order.create
 
 Manga.destroy_all
-m1 = Manga.create :title => 'Naruto'
-m2 = Manga.create :title => 'Bleach'
+m1 = Manga.create :title => 'One piece', :image => 'https://upload.wikimedia.org/wikipedia/en/a/a3/One_Piece%2C_Volume_1.jpg', :vol => 12
+m2 = Manga.create :title => 'Goblin Slayer', :image => 'https://m.media-amazon.com/images/I/51rXu2iQnWL._AC_SY580_.jpg', :vol => 13
+m3 = Manga.create :title => 'Ranking of Kings', :image => 'https://upload.wikimedia.org/wikipedia/en/5/51/%C5%8Csama_Ranking_volume_1_cover.jpg', :vol => 12
 puts "#{ Manga.count } Mangas"
 
 Author.destroy_all
-a1 = Author.create :name => 'Masashi Kishimoto'
-a2 = Author.create :name => 'Kubo Tite'
+a1 = Author.create :name => 'Eiichiro Oda'
+a2 = Author.create :name => 'Kumo Kagyu'
 puts "#{ Author.count } authors"
 
-Volume.destroy_all
-v1 = Volume.create :title => 'Naruto Uzumaki'
-v2 = Volume.create :title => 'The Worst Client'
-puts "#{ Volume.count } volumes"
+
 
 Genre.destroy_all
 g1 = Genre.create :name => 'Adventure'
@@ -30,14 +28,9 @@ puts "Books and authors"
 m1.genres << g1 << g2
 m2.genres << g1 << g2
 
-puts "Books and volumes"
-m1.volumes << v1 << v2
-
 puts "Books and authors"
 a1.mangas << m1
 
-puts "volumes and orders"
-o1.volumes << v1
 
 puts "user and orders"
 u2.orders << o1

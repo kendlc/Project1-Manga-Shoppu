@@ -3,6 +3,7 @@ class CreateVolumes < ActiveRecord::Migration[5.2]
     create_table :volumes do |t|
       t.text :title
       t.float :price
+      t.integer :quantity
       t.text :image
       t.integer :manga_id
       t.integer :order_id

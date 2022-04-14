@@ -1,0 +1,27 @@
+<h1><%= @manga.title %></h1>
+
+<% if @current_user.present? %>
+    <% if @current_user.admin? %>
+        <div class="controls">
+            <%= link_to "Edit", edit_manga_path(@manga) %>
+            <%= link_to "Delete", @manga, :method => 'delete', :data => { :confirm => 'Are you sure'} %>
+        </div>
+    <% end %>
+<% end %>
+
+
+<% @manga.volumes.each do |volume|  %>
+    <%= form_for @order do |f| %>
+    <p>Volume <%= volume.title %> Price: $ <%= volume.price %> Quantity: <%= volume.quantity %>
+    <%= f.submit "add to cart" %>
+        <% if @current_user.present? %>
+            <% if @current_user.admin? %>
+                <div class="vcontrols">
+                    <%= link_to "Modify", edit_volume_path(volume.id) %>
+                </div>
+            <% end %>
+        <% end %>
+    <% end %>
+<% end %>
+
+

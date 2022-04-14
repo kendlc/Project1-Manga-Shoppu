@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2022_04_12_011940) do
   create_table "mangas", force: :cascade do |t|
     t.text "title"
     t.text "image"
+    t.integer "vol"
     t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -57,6 +58,7 @@ ActiveRecord::Schema.define(version: 2022_04_12_011940) do
   create_table "volumes", force: :cascade do |t|
     t.text "title"
     t.float "price"
+    t.integer "quantity"
     t.text "image"
     t.integer "manga_id"
     t.integer "order_id"

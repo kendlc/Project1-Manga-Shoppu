@@ -1,12 +1,12 @@
-<h1>New manga</h1>
+<h1><%= @manga.title %></h1>
 
 <%= form_for @manga do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title %>
     <%= f.label :image %>
     <%= f.text_field :image %>
-    <%= f.label :vol, "Volume" %>
-    <%= f.number_field :vol %>
 
-    <%= f.submit "Add Manga" %>
+    <%= f.submit "Update Manga" %>
 <% end %>
+
+
