@@ -27,7 +27,7 @@ class MangasController < ApplicationController
 
   def show
     @manga = Manga.find params[:id]
-    @order = Order.create
+    @order = current_order.orders.new
       if @manga.volumes.length == 0
         for v in 1..@manga.vol
           @manga.volumes.create!(:title => v, :price => 14.99, :quantity => 10 )

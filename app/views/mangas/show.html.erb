@@ -8,20 +8,29 @@
         </div>
     <% end %>
 <% end %>
-
-
-<% @manga.volumes.each do |volume|  %>
-    <%= form_for @order do |f| %>
-    <p>Volume <%= volume.title %> Price: $ <%= volume.price %> Quantity: <%= volume.quantity %>
-    <%= f.submit "add to cart" %>
-        <% if @current_user.present? %>
-            <% if @current_user.admin? %>
-                <div class="vcontrols">
-                    <%= link_to "Modify", edit_volume_path(volume.id) %>
-                </div>
-            <% end %>
+<%= link_to "#{current_order.orders.size} Cart", cart_path %>
+<table>
+<% @manga.volumes.each do |volume|  %>  
+    <tr>
+        <td>
+            Volume <%= volume.title %> Price: $ <%= volume.price %> Quantity: <%= volume.quantity %>
+        </td>
+        <td>
+        <%= form_for @order, remote: true  do |f| %>
+            <% if @current_user.present? %>
+                    <% if @current_user.admin? %>
+                        <span class="vcontrols">
+                            <%= link_to "Modify", edit_volume_path(volume.id) %>
+                        </span>
+                    <% end %>
+                <% end %>
+            <%= f.hidden_field :volume_id, :value => volume.id %>
+            <%= f.number_field :quantity, :value => 1, :min =>  1%>
+            <%= f.submit "Add to Cart"%>
+            
         <% end %>
-    <% end %>
+        </td>
+    </tr>
 <% end %>
-
+</table>
 

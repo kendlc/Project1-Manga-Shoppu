@@ -3,8 +3,7 @@ u1 = User.create :email => 'kk@ga.co', :password => 'chicken', :admin => true
 u2 = User.create :email => 'll@ga.co', :password => 'chicken'
 puts "#{ User.count } users"
 
-Order.destroy_all
-o1 = Order.create
+
 
 Manga.destroy_all
 m1 = Manga.create :title => 'One piece', :image => 'https://upload.wikimedia.org/wikipedia/en/a/a3/One_Piece%2C_Volume_1.jpg', :vol => 12
@@ -31,6 +30,8 @@ m2.genres << g1 << g2
 puts "Books and authors"
 a1.mangas << m1
 
+Cart.destroy_all
+Cart.create
 
-puts "user and orders"
-u2.orders << o1
+
+

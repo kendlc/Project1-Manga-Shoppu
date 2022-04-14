@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+    include ApplicationHelper
     before_action :fetch_user
     
     private 

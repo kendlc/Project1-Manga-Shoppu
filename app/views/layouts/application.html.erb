@@ -11,11 +11,12 @@
 
   <body>
     <nav>
+      
       <%= link_to "Home", root_path %>
       <% if @current_user.present? %>
         <% if @current_user.admin? %>
           <%= link_to "All users", users_path %>
-          <%= link_to "New Manga Volume", new_manga_path %>
+          <%= link_to "New Manga Volume", new_manga_path %> 
         <% end %>
         <%= link_to "Sign out #{@current_user.email}", login_path, :method => 'delete' %>
       <% else %>

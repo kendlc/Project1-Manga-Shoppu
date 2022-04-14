@@ -1,5 +1,32 @@
 class Order < ApplicationRecord
-    has_many :volumes
-    belongs_to :user, :optional => true
+    belongs_to :volume, :optional => true
+    belongs_to :cart, :optional => true
     has_many :mangas, :through => :volumes
+
+    before_save :set_unit_price
+    before_save :set_total
+
+    def unit_price
+        if persisted?
+            self[:unit_price]
+        else
+            volume.price
+        end
+    end
+
+    def total
+        unit_price*quantity
+    end
+
+    private
+
+    def set_unit_price
+        self[:unit_price] = unit_price
+    end
+
+    def set_total
+        self[:total] = total*quantity
+    end
+
+
 end
