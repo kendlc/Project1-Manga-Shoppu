@@ -33,6 +33,7 @@ class MangasController < ApplicationController
           @manga.volumes.create!(:title => v, :price => 14.99, :quantity => 10 )
         end
       end
+      
   end
 
   def destroy
