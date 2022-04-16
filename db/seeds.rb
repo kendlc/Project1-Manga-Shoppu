@@ -30,8 +30,6 @@ m2.genres << g1 << g2
 puts "Books and authors"
 a1.mangas << m1
 
-Cart.destroy_all
-Cart.create
 
 
 

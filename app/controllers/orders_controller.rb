@@ -15,7 +15,7 @@ class OrdersController < ApplicationController
         @cart = @current_user
         @order = @cart.orders.find params[:id]
         @order.update order_params
-        redirect_to user_path
+        redirect_to orders_path
     end
 
     private
