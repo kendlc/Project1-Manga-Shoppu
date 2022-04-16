@@ -2,7 +2,7 @@
 
 
 <% if @current_user.present? %>
-    <%= link_to "#{@current_user.orders.size} Cart", orders_path %>
+    
     <% if @current_user.admin? %>
         <div class="controls">
             <%= link_to "Edit", edit_manga_path(@manga) %>
@@ -39,4 +39,6 @@
     </tr>
 <% end %>
 </table>
+
+<%= link_to 'Back', :back %>
 

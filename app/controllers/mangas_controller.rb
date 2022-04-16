@@ -26,6 +26,7 @@ class MangasController < ApplicationController
   end
 
   def show
+
     @manga = Manga.find params[:id]
     
     @order = @current_user.orders.new if @current_user.present?

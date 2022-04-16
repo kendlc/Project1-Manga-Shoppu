@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   
   root :to => 'pages#home'
+  get '/checkout' => 'pages#checkout'
+
   resources :users, :only => [:new, :create, :index, :show]
   resources :orders
   resources :mangas
   resources :volumes
-  resources :carts, :only => [:show, :index]
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

@@ -1,6 +1,5 @@
 <h1>heyyy</h1>
 
-
 <h1>heyo</h1>
 
 
@@ -14,8 +13,22 @@
         <%= f.hidden_field :volume_id, :value => item.volume.id %>
         <%= f.number_field :quantity, :value => item.quantity.to_i, :min =>  1, :max => item.volume.quantity%>
         <%= f.submit "Update Cart" %>
+
+    <%= button_to "Remove Items", item, method: :delete, remote: true%>
+        
     <% end %>
+
+    
 
     <h2>Subtotal: <%= item.total %></h2>
 
 <% end %>  
+
+<h3>Total Cart Value: $ <%= @current_user.subtotal %></h3>
+
+
+<% if @orders.size != 0 %>
+    <%= link_to "Checkout", checkout_path%>
+<% else %>
+    <%= link_to "Go and buy something!", root_path %>
+<% end %>

@@ -2,3 +2,7 @@
     width: 192px;
     height: 288px;
 }
+
+.unclickable {
+    pointer-events: none;
+}

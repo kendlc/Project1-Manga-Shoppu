@@ -10,6 +10,8 @@ class VolumesController < ApplicationController
     redirect_to manga
   end
 
+  
+
   def destroy
     volume = Volume.find params[:id]
     volume.destroy
