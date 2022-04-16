@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :mangas
   resources :volumes
-  resources :carts, :only => [:show]
+  resources :carts, :only => [:show, :index]
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'
