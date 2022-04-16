@@ -1,6 +1,6 @@
 class Order < ApplicationRecord
     belongs_to :volume, :optional => true
-    belongs_to :cart, :optional => true
+    belongs_to :user
     has_many :mangas, :through => :volumes
 
     before_save :set_unit_price

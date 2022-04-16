@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 2022_04_14_021417) do
   end
 
   create_table "carts", force: :cascade do |t|
-    t.integer "user_id"
     t.float "subtotal"
     t.float "total"
     t.datetime "created_at", null: false
@@ -52,7 +51,7 @@ ActiveRecord::Schema.define(version: 2022_04_14_021417) do
   create_table "orders", force: :cascade do |t|
     t.integer "quantity"
     t.integer "volume_id"
-    t.integer "cart_id"
+    t.integer "user_id"
     t.decimal "total"
     t.decimal "unit_price"
     t.datetime "created_at", null: false
@@ -61,6 +60,8 @@ ActiveRecord::Schema.define(version: 2022_04_14_021417) do
 
   create_table "users", force: :cascade do |t|
     t.text "email"
+    t.float "subtotal"
+    t.float "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"

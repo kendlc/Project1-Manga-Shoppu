@@ -1,17 +1,21 @@
 class OrdersController < ApplicationController
 
+
+    def index
+        @orders = @current_user.orders
+    end
+
     def create
-       @cart = current_order
+       @cart = @current_user
        @order = @cart.orders.new(order_params)
        @cart.save
-       session[:cart_id] = @cart.id
     end
 
     def update
-        @cart = current_order
+        @cart = @current_user
         @order = @cart.orders.find params[:id]
         @order.update order_params
-        redirect_to cart_path
+        redirect_to user_path
     end
 
     private
