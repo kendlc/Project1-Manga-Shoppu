@@ -22,7 +22,7 @@ Manga-shoppu is an e-commerce web application that allows users to purchase diff
     - create an account that allows them to add items to their cart
     - Log in and Log out
     - add items to their cart once signed in
-    - edit their cart items (change quanty or remove item) and checkout
+    - edit their cart items (change quantity or remove item) and checkout
     - save items on their cart
 
 ## Features
