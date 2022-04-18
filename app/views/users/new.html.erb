@@ -1,25 +1,55 @@
-<h1>Sign Up</h1>
-
 <% if @user.errors.any? %>
     <ol>
         <% @user.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
-            <% end %>
+        <% end %>
     </ol>
 <% end %>
 
-<%= form_for @user do |f|%>
-    <%= f.label :email%>
-    <%= f.email_field :email%>
+<div class="signup">
 
-    <%= f.label :password %>
-    <%= f.password_field :password %>
+    <div class="su">
+        <h2>Create an Account</h2>
+        <h4 style="color:gray">It's quick and easy.</h4>
+    </div>
 
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation%>
+    <%= form_for @user do |f|%>
+    <ul>
+        <li>
+            <%= f.hidden_field :username%>
+            <%= f.text_field :username, :required => true, :placeholder => 'Username', :class => 'field' %>
+        </li>
+        <li>
+            <%= f.hidden_field :email%>
+            <%= f.email_field :email, :placeholder => 'Email', :class => 'field' %>
+        </li>
+        <li>
+            <%= f.hidden_field :address%>
+            <%= f.text_field  :address, :placeholder => 'Address',  :class => 'field' %>
+        </li>
+        <li>
+            <%= f.hidden_field :bank%>
+            <%= f.text_field  :bank, :placeholder => 'Bank',  :class => 'field' %>
+        </li>
+        <li>
+            <%= f.hidden_field :account%>
+            <%= f.number_field  :account, :placeholder => 'Account Number',  :class => 'field' %>
+        </li>
+        <li>
+            <%= f.hidden_field :code%>
+            <%= f.password_field  :code, :placeholder => 'CSV',  :class => 'field' %>
+        </li>
+        <li>
+            <%= f.hidden_field :password %>
+            <%= f.password_field :password, :placeholder => 'Password',  :class => 'field' %>
+        </li>
+        <li>
+            <%= f.hidden_field :password_confirmation %>
+            <%= f.password_field :password_confirmation, :placeholder => 'Confrim Password',  :class => 'field' %>
+        </li>
 
-
-    <%= f.submit "Sign Up!" %>
-<% end %>
- 
+        <%= f.submit "Sign Up!", :class => 'button' %>
+    </ul>
+    <% end %>
+</div>
 

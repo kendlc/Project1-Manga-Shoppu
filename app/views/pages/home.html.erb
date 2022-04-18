@@ -1,18 +1,37 @@
-<h1>The<strong>Manga</strong>Shoppu</h1>
-
 <% if @current_user.present? %>
-    <h2>Welcome <%= @current_user.email %>!</h2>
+    <h1>Welcome <%= @current_user.username %>!</h1>
 <% end %>
 
+<% if @current_user.present? %>
+    <form class='futureFeature'>
+        <input type="text" class='field' placeholder="Manga Search">
+    </form>
+<% else %>
+    <form class='futureFeaturei'>
+        <input type="text" class='searchField' placeholder="Manga Search">
+    </form>
+<% end %>
 
+<h2 class='catalog'>Top Selling</h2>|
+<h2 class='catalog'>Highest Rating</h2>|
+<h2 class='catalog'>Most Recent</h2>|
+<h2 class='catalog'>Genres</h2>|
+<h2 class='catalog'>Alphabetical</h2>
 
 <div class="content">
     <% @mangas.each do |manga|%>
-       
-        <%= link_to (image_tag manga.image, :class => 'thumb'), manga %>
-        <%= link_to manga.title, manga %>
-
+        <div class="card">
+            <%= link_to (image_tag manga.image, :class => 'thumb'), manga %>
+            <%= link_to manga.title, manga %>
+        </div>
     <% end%>
+
+<% @final_data["data"].each do |i|%>
+    <div class="card">
+        <img class='thumb' src="<%= i["images"]["jpg"]["image_url"] %>">
+        <%= i["title"] %>
+    </div>
+<% end%>
 </div>
 
 

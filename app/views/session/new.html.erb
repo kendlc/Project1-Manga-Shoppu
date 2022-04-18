@@ -1,13 +1,27 @@
-<h1>Log In</h1>
 
-<%= form_tag login_path do %>
-    <%= label_tag :email %>
-    <%= email_field_tag :email %>
+<div class='culture'>
+    <h2>Ah, I see you're a </h2>
+    <h1>Human of culture</h1>
+    <h2>As well.</h2>
+</div>
 
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-
-    <%= submit_tag "Sign in" %>
-<% end %>
-
- 
+<div class="loginBox">
+    <div class="login">
+        <p class='logo'><strong>Manga</strong>Shoppu</p>
+        <%= form_tag login_path do %>
+            <ul>
+                <li>
+                    <%= hidden_field_tag :email %>
+                    <%= email_field_tag :email, "", class: 'field', placeholder: 'Email'%>
+                </li>
+                <li>
+                    <%= hidden_field_tag :password %>
+                    <%= password_field_tag :password, "", class: 'field', placeholder: 'Password' %>
+                </li>
+                <li>
+                    <%= submit_tag "Log in", :class => 'button in' %>
+                </li>
+            </ul>
+        <% end %>
+    </div>
+</div>

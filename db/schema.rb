@@ -35,8 +35,9 @@ ActiveRecord::Schema.define(version: 2022_04_12_011940) do
   create_table "mangas", force: :cascade do |t|
     t.text "title"
     t.text "image"
+    t.text "author"
+    t.text "synopsis"
     t.integer "vol"
-    t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -53,6 +54,11 @@ ActiveRecord::Schema.define(version: 2022_04_12_011940) do
 
   create_table "users", force: :cascade do |t|
     t.text "email"
+    t.text "username"
+    t.text "address"
+    t.text "bank"
+    t.integer "account"
+    t.integer "code"
     t.float "subtotal"
     t.float "total"
     t.datetime "created_at", null: false

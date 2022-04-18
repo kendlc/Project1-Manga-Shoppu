@@ -1,13 +1,21 @@
-<h1><%= @volume.title %></h1>
 
-<%= link_to "Delete", @volume, :method => 'delete', :data => { :confirm => 'Are you sure'} %>
+<h1><%= @volume.manga.title %> Volume <%= @volume.title %></h1>
+
+
 
 <%= form_for @volume do |f| %>
+   
     <%= f.label :price%>
     <%= f.text_field :price %>
+
+    <%= f.label :quantity%>
+    <%= f.text_field :quantity %>
+  
+    <p>
+        <%= f.submit "Update Volume", :class => 'buttonCrud' %>
+        <%= link_to "Delete", @volume, :method => 'delete', :data => { :confirm => 'Are you sure'}, :class => 'crudButton' %>
+    </p>
     
-   
-    <%= f.submit %>
 <% end %>
 
 

@@ -10,26 +10,28 @@
   </head>
 
   <body>
+
     <nav>
-      
-      <%= link_to "Home", root_path %>
-      <% if @current_user.present? %>
-        <%= link_to "Cart", orders_path %>
-      <% else %>
-        <%= link_to "Cart", login_path %>
-      <% end %>
-      <% if @current_user.present? %>
-          <% if @current_user.admin? %>
-            <%= link_to "All users", users_path %>
-            <%= link_to "New Manga Volume", new_manga_path %> 
-          <% end %>
-          <%= link_to "Sign out #{@current_user.email}", login_path, :method => 'delete' %>
-      <% else %>
-        <%= link_to "Sign up", new_user_path %>
-        <%= link_to "Sign in", login_path %>
-      <% end %>
-       
+      <span class="sign"><strong>Manga</strong>Shoppu</span>
+      <div class="navButtons">    
+        <%= link_to "Home", root_path %>
+        <% if @current_user.present? %>
+            <%= link_to "Cart", orders_path %>  
+            <% if @current_user.admin? %>
+              <%= link_to "All users", users_path %>
+              <%= link_to "Add Product", new_manga_path %> 
+            <% end %>
+            <%= link_to "Sign out #{@current_user.username}", login_path, :method => 'delete' %>
+        <% else %>
+          <%= link_to "Sign up", new_user_path %>
+          <%= link_to "Log in", login_path %>
+        <% end %>
+      </div>
     </nav>
-    <%= yield %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
   </body> 
 </html>
