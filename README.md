@@ -17,12 +17,13 @@ Manga-shoppu is an e-commerce web application that allows users to purchase diff
 * Admin users can add and edit manga and its volumes
     - Manga ( name, images, synopsis )
     - Volumes ( name, price, stock quantity)
-* Users can browse the manga catalogue without creating an account
-* Users can create an account that allows them to add items to their cart
-* Users can Log in and Log out
-* Users can add items to their cart once signed in
-* Users can edit their cart items (change quanty or remove item) and checkout
-* Users can save items on their cart
+* Users can
+    - browse the manga catalogue without creating an account
+    - create an account that allows them to add items to their cart
+    - Log in and Log out
+    - add items to their cart once signed in
+    - edit their cart items (change quanty or remove item) and checkout
+    - save items on their cart
 
 ## Features
 
