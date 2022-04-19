@@ -1,18 +1,33 @@
-<h1><%= @manga.title %></h1>
+<div class="signup">
 
-<%= form_for @manga do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.label :author %>
-    <%= f.text_field :author %>
-    <%= f.label :author %>
-    <%= f.text_field :author %>
-    <%= f.label :synopsis %>
-    <%= f.text_field :synopsis %>
-    <%= f.label :image %>
-    <%= f.text_field :image %>
+    <div class="su">
+        <h1>Edit <%= @manga.title %></h1>
+    </div>
 
-    <%= f.submit "Update Manga" %>
-<% end %>
+    <%= form_for @manga do |f| %>
+        <ul>
+            <li>
+                <%= f.hidden_field :title %>
+                <%= f.text_field :title, :placeholder => 'Title', :class => 'field' %>
+            </li>
+            <li>
+                <%= f.hidden_field :author %>
+                <%= f.text_field :author, :placeholder => 'Author', :class => 'field' %>
+            </li>
+            <li>
+                <%= f.hidden_field :synopsis %>
+                <%= f.text_field :synopsis, :placeholder => 'Synopsis', :class => 'field' %>
+            </li>
+            <li>
+                <%= f.hidden_field :vol %>
+                <%= f.number_field :vol, :min =>  1, :placeholder => 'Volumes', :class => 'field' %>
+            </li>
+            <li>
+                <%= f.hidden_field :image %>
+                <%= f.text_field :image, :placeholder => 'Image URL', :class => 'field' %>
+            </li>
 
-
+        <%= f.submit "Update Manga", :class => 'button' %>
+        </ul>
+    <% end %>
+</div>
