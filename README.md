@@ -57,7 +57,7 @@ These limitations of the web app are things that I want to work on in the future
     - Added mangas by admin user will be functional
 * User cannot edit profile or account
 * User cannot view order history
-* Bank account and checkout button have no functional connect 
+* Bank account and checkout button have no functional connection
 * Manga catalogue pages (Top Selling, Most Recent, etc..) are placeholders and does not direct to a new page
 * Search bar is a placeholder and not functional atm (Plan to associate through Jikan API)
 * Cart duplicates items in the cart instead of tallying total item quantity
