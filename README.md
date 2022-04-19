@@ -1,7 +1,7 @@
 # Manga-shoppu
 https://manga-shoppu.herokuapp.com/
 
-Manga-shoppu is an e-commerce web application that allows users to purchase different kind of mangas. Admin users can add and edit product description, image, prices, and stock quantities. While users can add products to their carts and have a subtotal and total costs on their cart. 
+Manga-shoppu is an e-commerce web application that allows users to purchase different kind of mangas. Admin users can add and edit product description, image, prices, and stock quantities. While users can add products to their carts, have a subtotal and total costs on their cart and checkout. 
 
 ## Tech Stack:
 * HTML
@@ -22,7 +22,7 @@ Manga-shoppu is an e-commerce web application that allows users to purchase diff
     - create an account that allows them to add items to their cart
     - Log in and Log out
     - add items to their cart once signed in
-    - edit their cart items (change quantity or remove item) and checkout
+    - edit cart items (change quantity or remove item) and checkout
     - save items on their cart
 
 ## Features
