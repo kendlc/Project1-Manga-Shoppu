@@ -3,12 +3,14 @@
 <%= form_for @manga do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title %>
-    <%= f.label :image %>
-    <%= f.text_field :image %>
+    <%= f.label :author %>
+    <%= f.text_field :author %>
     <%= f.label :synopsis %>
     <%= f.text_field :synopsis %>
     <%= f.label :vol, "Volumes" %>
     <%= f.number_field :vol, :min =>  1 %>
+    <%= f.label :image %>
+    <%= f.text_field :image %>
 
     <%= f.submit "Add Manga" %>
 <% end %>
