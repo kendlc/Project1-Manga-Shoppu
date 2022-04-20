@@ -71,6 +71,11 @@ These limitations of the web app are things that I want to work on in the future
 * Search bar is a placeholder and not functional atm (Plan to associate through Jikan API)
 * Cart duplicates items in the cart instead of tallying total item quantity
 
+### Model Associations
+
+![Associations](app/assets/images/MA.png)
+
+
 ### Photos
 
 ![SignUp](app/assets/images/SS1.png)
