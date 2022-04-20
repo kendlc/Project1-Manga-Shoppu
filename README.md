@@ -1,6 +1,17 @@
 # Manga-shoppu
 https://manga-shoppu.herokuapp.com/
 
+### Logins
+Admin:
+
+`Email: kk@ga.co 
+Password: chicken`
+
+`Normal user:
+
+Email: ll@ga.co 
+Password: chicken`
+
 Manga-shoppu is an e-commerce web application that allows users to purchase different kind of mangas. Admin users can add and edit product description, image, prices, and stock quantities. While users can add products to their carts, have a subtotal and total costs on their cart and checkout. 
 
 ## Tech Stack:
