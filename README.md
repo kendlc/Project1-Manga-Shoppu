@@ -1,4 +1,4 @@
-# Manga-shoppu
+# Manga-shoppu 
 https://manga-shoppu.herokuapp.com/
 
 ### Logins
