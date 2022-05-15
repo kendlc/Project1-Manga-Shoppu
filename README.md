@@ -78,6 +78,8 @@ These limitations of the web app are things that I want to work on in the future
 
 ### Photos
 
+<img src="app/assets/images/SS1.pn" width="100" alt="">
+
 ![SignUp](app/assets/images/SS1.png)
 ![Login](app/assets/images/SS2.png)
 ![Browse](app/assets/images/SS3.png)
