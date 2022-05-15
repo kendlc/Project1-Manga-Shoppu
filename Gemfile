@@ -53,3 +53,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 gem 'jikan.rb'
 gem 'rest-client', '~> 2.1'
+gem 'meta-tags'
