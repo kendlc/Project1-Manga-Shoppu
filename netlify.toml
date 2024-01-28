@@ -1,6 +1,0 @@
-[build]
-  publish = "public"
-  command = "bundle exec rails assets:precompile"
-
-[context.production.environment]
-  DATABASE_URL = "postgres://myuser:mypass@localhost/somedatabase"
