@@ -1,6 +1,6 @@
 databases:
-  - name: manga-shoppu-db
-    databaseName: manga-shoppu-db
+  - name: mangashoppudb
+    databaseName: mangashoppudb
     user: kendlc
     plan: free
 
@@ -15,7 +15,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: manga-shoppu-db
+          name: mangashoppudb
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
