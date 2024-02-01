@@ -1,5 +1,5 @@
 # Manga-shoppu  
-https://manga-shoppu.herokuapp.com/
+https://manga-shoppu.onrender.com/
 
 ### Logins
 Admin:
@@ -19,8 +19,8 @@ Manga-shoppu is an e-commerce web application that allows users to purchase diff
 * Rails
 * PostgreSQL
 * Active Record
-* Heroku
 * Jikan API
+* Render
 
 ## Functionalities
 * Admin users can add and edit manga and its volumes
