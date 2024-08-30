@@ -1,7 +1,7 @@
 # Manga-shoppu
 
 https://manga-shoppu.onrender.com/
-(Note: It might take a minute or two to load as it's hosted on a free plan :))
+(Note: It might take a minute or two to load as it's hosted on a free plan 🙂)
 
 ### Logins
 
